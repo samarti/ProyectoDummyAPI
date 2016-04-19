@@ -1,8 +1,6 @@
 .gradle
 build/
 
-docker-compose.yml
-
 # Ignore Gradle GUI config
 gradle-app.setting
 

@@ -15,7 +15,7 @@ apply plugin: 'java'
 
 jar {
     manifest {
-        attributes 'Main-Class': 'server.server'
+        attributes 'Main-Class': 'server.Server'
     }
     from {
         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
