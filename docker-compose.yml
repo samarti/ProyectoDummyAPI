@@ -1,0 +1,4 @@
+local:
+  image: dummy-api
+  ports:
+    - "4567:4567"
