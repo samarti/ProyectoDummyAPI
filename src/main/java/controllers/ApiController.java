@@ -19,16 +19,20 @@ public class ApiController {
     public static Response getAnnouncements(Request request, Response response){
         Timestamp aux = new Timestamp(System.currentTimeMillis());
         Announcement announcement1 = new Announcement(1, 23, 3, new int[] { 56, 34, 89}, aux,
-                "Asado Incuba", false, false);
+                "Asado Incuba", false, false, true);
         Announcement announcement2 = new Announcement(2, 12, 2, new int[] { 45, 3, 8}, aux,
-                "No se olviden de justificar remesas", true, false);
+                "No se olviden de justificar remesas", true, false, false);
+        Announcement announcement3 = new Announcement(3, 4, null, new int[] {}, aux,
+                "Mensaje de emprendedor", false, true, false);
         JsonArray ret = new JsonArray();
         JsonParser parser = new JsonParser();
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
         String str1 = gson.toJson(announcement1, Announcement.class);
         String str2 = gson.toJson(announcement2, Announcement.class);
+        String str3 = gson.toJson(announcement3, Announcement.class);
         ret.add(parser.parse(str1));
         ret.add(parser.parse(str2));
+        ret.add(parser.parse(str3));
         response.body(ret.toString());
         return response;
     }
