@@ -13,7 +13,7 @@ public class Announcement {
     int[] document;
     Timestamp created;
     String message;
-    boolean technical_check, venture_check;
+    boolean technical_check, venture_check, financial_check;
 
     public Announcement(int id, int board, int executive, int[] document,
                         Timestamp created, String message, boolean technical_check, boolean venture_check) {
