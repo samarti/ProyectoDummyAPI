@@ -17,7 +17,11 @@ public class Server {
 
         get("/announcements", (request, response) -> ApiController.getAnnouncements(request, response).body());
 
-        post("/login", (request, response) -> ApiController.getUser(request, response).body());
+        get("/checklists", (request, response) -> ApiController.getChecklist(request, response).body());
+
+        get("/tasks", (request, response) -> ApiController.getTasks(request, response).body());
+
+        post("/login", (request, response) -> ApiController.login(request, response).body());
 
     }
 }
