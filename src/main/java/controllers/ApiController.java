@@ -29,7 +29,7 @@ public class ApiController {
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
         String str1 = gson.toJson(announcement1, Announcement.class);
         String str2 = gson.toJson(announcement2, Announcement.class);
-        String str3 = gson.toJson(announcement2, Announcement.class);
+        String str3 = gson.toJson(announcement3, Announcement.class);
         ret.add(parser.parse(str1));
         ret.add(parser.parse(str2));
         ret.add(parser.parse(str3));
