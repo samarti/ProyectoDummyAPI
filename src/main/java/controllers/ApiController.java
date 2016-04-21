@@ -79,11 +79,16 @@ public class ApiController {
 
     public static Response getTasks(Request request, Response response) {
         Timestamp aux = new Timestamp(System.currentTimeMillis());
-        Task t1 = new Task(1, 2, aux, aux, aux, aux, "Tarea 1", "Dominio 1", "Name 1", "some privacy", "some status", "some type");
-        Task t2 = new Task(1, 2, aux, aux, aux, aux, "Tarea 2", "Dominio 2", "Name 2", "some privacy", "some status", "some type");
-        Task t3 = new Task(1, 2, aux, aux, aux, aux, "Tarea 3", "Dominio 3", "Name 3", "some privacy", "some status", "some type");
-        Task t4 = new Task(1, 2, aux, aux, aux, aux, "Tarea 4", "Dominio 4", "Name 4", "some privacy", "some status", "some type");
-        Task t5 = new Task(1, 2, aux, aux, aux, aux, "Tarea 5", "Dominio 5", "Name 5", "some privacy", "some status", "some type");
+        Task t1 = new Task(1, 2, aux, aux, aux, aux, "La remesa 3 tuvo algunos problemas de justificación, ruego ver los adjuntos!", 
+            "Dominio 1", "Justificar Remesa #3", "some privacy", "some status", "Remesas");
+        Task t2 = new Task(1, 2, aux, aux, aux, aux, "Será a las 8:30 en las oficinas de Incuba. Lleguen con tiempo para tener cuidado con el taco!",
+            "Dominio 2", "No se olviden reunión martes 23/04!", "some privacy", "some status", "Reuniones");
+        Task t3 = new Task(1, 2, aux, aux, aux, aux, "Los datos actuales no están al día. Debemos mostrar el crecimiento de los últimos meses", 
+            "Dominio 3", "Subir últimos datos de ventas", "some privacy", "some status", "Dashboard");
+        Task t4 = new Task(1, 2, aux, aux, aux, aux, "Falta subir las últimas boletas, no se olviden de sacarle foto y todo", 
+            "Dominio 4", "Ver tema boletas diciembre", "some privacy", "some status", "Boletas");
+        Task t5 = new Task(1, 2, aux, aux, aux, aux, "Tarea 5", "Está todo súper sucio, se huele hasta la calle", 
+            "Lavar la ropa", "some privacy", "some status", "Random");
 
         JsonArray ret = new JsonArray();
         JsonParser parser = new JsonParser();
