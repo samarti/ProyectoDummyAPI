@@ -56,8 +56,8 @@ public class ApiController {
                 ret.addProperty("Error", "Missing fields");
                 throw new Exception();
             }
-            User userAux = new User(1, "1234");
-            if(user.getId() != userAux.getId()){
+            User userAux = new User("aneyem@uc.cl", "aneyem");
+            if(!user.getUsername().equals(userAux.getUsername())){
                 ret.addProperty("Error", "User not found");
                 throw new Exception();
             }
